@@ -64,9 +64,21 @@ body {
 /*
  * Header
  */
+
+#upmlogo {
+  height:45px;
+  display:inline;
+  margin-top: -13px;
+  opacity:0.9
+}
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  float: left;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .masthead-nav > li {
@@ -103,6 +115,8 @@ body {
   }
   .masthead-nav {
     float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -119,6 +133,31 @@ body {
   font-weight: 700;
 }
 
+.invisibility {
+    display: none;
+}
+
+/*
+ * Servicios
+ */
+.invisibility {}
+
+/*
+ * Instalaciones
+ */
+
+#instalaciones {}
+
+/*
+ * Registro
+ */
+#registro {}
+
+/*
+ * Login
+ */
+
+#login {}
 
 /*
  * Footer
@@ -158,6 +197,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 85%;
   }
 }
