@@ -9,6 +9,7 @@ a,
 a:focus,
 a:hover {
   color: #fff;
+  text-decoration: none;
 }
 
 /* Custom default button */
@@ -37,39 +38,14 @@ body {
   text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, .5);
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
-
-
 /*
  * Header
  */
 
 #upmlogo {
-  height:45px;
+  height:70px;
   display:inline;
-  margin-top: -13px;
-  opacity:0.9
+  border-radius: 8px;
 }
 
 .masthead-brand {
@@ -78,7 +54,6 @@ body {
   float: left;
   padding: 15px 15px;
   font-size: 18px;
-  line-height: 20px;
 }
 
 .masthead-nav > li {
@@ -109,38 +84,31 @@ body {
   border-bottom-color: #fff;
 }
 
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-
 /*
- * Cover
+ * Home
  */
-
-.cover {
-  padding: 0 20px;
-}
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: 700;
-}
 
 .invisibility {
     display: none;
 }
 
+.img-background {
+  background: url('../img/red.jpg') no-repeat;
+  background-size: cover;
+  color:white;
+  border:1px solid black;
+  border-radius: 10px;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+}
+
 /*
  * Servicios
  */
-.invisibility {}
+#servicios {}
 
 /*
  * Instalaciones
@@ -159,44 +127,55 @@ body {
 
 #login {}
 
+#inputUser, #inputPassword{
+  width: 260px;
+  margin: 0 auto;
+}
+
+#btnLogin, #btnRegistro {
+  margin-top: 20px;
+}
+
 /*
  * Footer
  */
-
-.mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255, 255, 255, .5);
+footer {
+  color: rgba(255, 255, 255, .75);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px; /* Set the fixed height of the footer here */
 }
-
 
 /*
- * Affix and center
+ * Media Queries
  */
-
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
+  .masthead-brand {
+    float: left;
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
+  .masthead-nav {
+    float: right;
+    margin-top: 36px;
+    margin-bottom: 10px;
   }
-  .site-wrapper-inner {
-    vertical-align: middle; /* Start the vertical centering */
-  }
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  .img-background {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }
 
-@media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 85%;
+@media (max-width: 765px) {
+  .img-background {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .masthead-brand {
+    margin: 10px 30%;
+  }
+
+  #upmlogo {
+    margin-bottom: 10px;
   }
 }

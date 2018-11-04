@@ -38,5 +38,10 @@ $(document).ready(function(){
         $("#registro").addClass("invisibility");
         $("#home").addClass("invisibility");
     });
+
+    $(function () {
+        $(".datepicker").datepicker();
+    });
+
 });
 
