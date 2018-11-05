@@ -145,10 +145,16 @@ body {
 
 #login {}
 
-#inputUser, #inputPassword{
+#inputUser, #inputPassword, #emptyUser, #emptyPassword{
   width: 260px;
   margin: 0 auto;
 }
+
+#emptyUser, #emptyPassword{
+  line-height: 2px;
+  height: 34px;
+}
+
 
 #btnLogin, #btnRegistro {
   margin-top: 20px;

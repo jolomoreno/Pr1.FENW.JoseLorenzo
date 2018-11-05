@@ -5,7 +5,6 @@ $(document).ready(function(){
     });
 
     $("#servicios-link").click(function () {
-        console.log("Click en servicios-link");
         $("#servicios").removeClass("invisibility");
         $("#instalaciones").addClass("invisibility");
         $("#registro").addClass("invisibility");
@@ -14,7 +13,6 @@ $(document).ready(function(){
     });
 
     $("#instalaciones-link").click(function () {
-        console.log("Click en instalaciones-link");
         $("#instalaciones").removeClass("invisibility");
         $("#servicios").addClass("invisibility");
         $("#registro").addClass("invisibility");
@@ -23,7 +21,6 @@ $(document).ready(function(){
     });
 
     $("#registro-link").click(function () {
-        console.log("Click en registro-link");
         $("#registro").removeClass("invisibility");
         $("#instalaciones").addClass("invisibility");
         $("#servicios").addClass("invisibility");
@@ -32,16 +29,47 @@ $(document).ready(function(){
     });
 
     $("#login-link").click(function () {
-        console.log("Click en login-link");
         $("#login").removeClass("invisibility");
         $("#instalaciones").addClass("invisibility");
         $("#registro").addClass("invisibility");
         $("#home").addClass("invisibility");
+        $("#servicios").addClass("invisibility");
     });
 
     /*$(function () {
         $(".datepicker").datepicker();
     });*/
+
+    $("#btnLogin").click(function () {
+        let inputUser = $("#inputUser").val();
+        let inputPassword = $("#inputPassword").val();
+        if(inputUser === "") {
+            $("#emptyUser").removeClass("invisibility");
+        }else{
+            $("#emptyUser").addClass("invisibility");
+        }
+
+        if(inputPassword === ""){
+            $("#emptyPassword").removeClass("invisibility");
+        }else{
+            $("#emptyPassword").addClass("invisibility");
+        }
+
+        console.log("User: " + inputUser);
+        console.log("Password: " + inputPassword);
+
+        $.ajax({
+            url: "http://fenw.etsisi.upm.es:5555/users/login?username="+inputUser+"&password="+inputPassword,
+            async: true,
+            type: "GET",
+            success: function (data) {
+                console.log("EXITO: "+ data);
+            },
+            error: function (e) {
+                console.log("ERROR: " + e);
+            }
+        });
+    });
 
 });
 
