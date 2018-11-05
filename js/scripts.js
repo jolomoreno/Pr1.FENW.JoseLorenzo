@@ -39,9 +39,9 @@ $(document).ready(function(){
         $("#home").addClass("invisibility");
     });
 
-    $(function () {
+    /*$(function () {
         $(".datepicker").datepicker();
-    });
+    });*/
 
 });
 
