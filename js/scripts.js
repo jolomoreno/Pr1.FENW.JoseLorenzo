@@ -10,6 +10,8 @@ $(document).ready(function(){
         $("#registro").addClass("invisibility");
         $("#login").addClass("invisibility");
         $("#home").addClass("invisibility");
+        $("#emptyUser").addClass("invisibility");
+        $("#emptyPassword").addClass("invisibility");
     });
 
     $("#instalaciones-link").click(function () {
@@ -18,6 +20,8 @@ $(document).ready(function(){
         $("#registro").addClass("invisibility");
         $("#login").addClass("invisibility");
         $("#home").addClass("invisibility");
+        $("#emptyUser").addClass("invisibility");
+        $("#emptyPassword").addClass("invisibility");
     });
 
     $("#registro-link").click(function () {
@@ -26,6 +30,8 @@ $(document).ready(function(){
         $("#servicios").addClass("invisibility");
         $("#login").addClass("invisibility");
         $("#home").addClass("invisibility");
+        $("#emptyUser").addClass("invisibility");
+        $("#emptyPassword").addClass("invisibility");
     });
 
     $("#login-link").click(function () {
@@ -34,6 +40,8 @@ $(document).ready(function(){
         $("#registro").addClass("invisibility");
         $("#home").addClass("invisibility");
         $("#servicios").addClass("invisibility");
+        $("#emptyUser").addClass("invisibility");
+        $("#emptyPassword").addClass("invisibility");
     });
 
     /*$(function () {

@@ -146,7 +146,7 @@ body {
 #login {}
 
 #inputUser, #inputPassword, #emptyUser, #emptyPassword{
-  width: 260px;
+  width: 350px;
   margin: 0 auto;
 }
 
@@ -199,5 +199,9 @@ footer {
 
   #upmlogo {
     margin-bottom: 10px;
+  }
+
+  #inputUser, #inputPassword, #emptyUser, #emptyPassword {
+    width: 100%;
   }
 }
