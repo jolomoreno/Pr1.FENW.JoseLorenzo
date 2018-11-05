@@ -91,9 +91,12 @@ body {
     display: none;
 }
 
-.center-div {
+.section-table {
   display: table;
   margin: 0 auto;
+  border-radius: 6px;
+  width: 100%;
+  padding: 10px 0px 0px 15px;
 }
 
 .img-clases {
