@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    window.document.cookie = "tokenAPI=1a2s3d4f5g6h7j8k9l0; path=/";
+    window.document.cookie = "PRUEBA=PRUEBA; path=/";
     console.log(window.document.cookie);
 
     $(".nav a").on("click", function(){
@@ -73,14 +73,15 @@ $(document).ready(function(){
                 console.log("DATA: "+ data);
                 console.log("STATUS: "+ texStatus);
                 console.log("Authorization: "+ request.getResponseHeader("Authorization"));
+                window.document.cookie = "tokenAPI="+request.getResponseHeader("Authorization")+"; path=/";
+                console.log(window.document.cookie);
             },
             error: function (e) {
                 console.log("ERROR: " + e);
             }
         });
 
-        window.document.cookie = "tokenAPI=1a2s3d4f5g6h7j8k9l0; path=/";
-        console.log(window.document.cookie);
+
     });
 
 });
