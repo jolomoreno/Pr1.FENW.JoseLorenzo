@@ -70,8 +70,10 @@ $(document).ready(function(){
             url: "http://fenw.etsisi.upm.es:5555/users/login?username="+inputUser+"&password="+inputPassword,
             async: true,
             type: "GET",
-            success: function (data) {
-                console.log("EXITO: "+ data);
+            success: function (data, texStatus, request) {
+                console.log("DATA: "+ data);
+                console.log("STATUS: "+ texStatus);
+                console.log("Authorization: "+ request.getResponseHeader("Authorization"));
             },
             error: function (e) {
                 console.log("ERROR: " + e);
