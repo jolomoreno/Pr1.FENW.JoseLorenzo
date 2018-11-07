@@ -1,4 +1,7 @@
 $(document).ready(function(){
+    window.document.cookie = "tokenAPI=1a2s3d4f5g6h7j8k9l0; path=/";
+    console.log(window.document.cookie);
+
     $(".nav a").on("click", function(){
         $(".nav").find(".active").removeClass("active");
         $(this).parent().addClass("active");
@@ -44,10 +47,6 @@ $(document).ready(function(){
         $("#emptyPassword").addClass("invisibility");
     });
 
-    /*$(function () {
-        $(".datepicker").datepicker();
-    });*/
-
     $("#btnLogin").click(function () {
         let inputUser = $("#inputUser").val();
         let inputPassword = $("#inputPassword").val();
@@ -79,7 +78,9 @@ $(document).ready(function(){
                 console.log("ERROR: " + e);
             }
         });
+
+        window.document.cookie = "tokenAPI=1a2s3d4f5g6h7j8k9l0; path=/";
+        console.log(window.document.cookie);
     });
 
 });
-
