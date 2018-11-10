@@ -29,9 +29,10 @@
                         <li class="active"><a href="index.html">Inicio</a></li>
                         <li><a href="#servicios" id="servicios-link">Servicios</a></li>
                         <li><a href="#instalaciones" id="instalaciones-link">Instalaciones</a></li>
-                        <li><a href="#reservar" id="reservar-link">Reservar</a></li>
+                        <li id="reservar-li"><a href="#reservar" id="reservar-link">Reservar</a></li>
                         <li><a href="#registro" id="registro-link">Registro</a></li>
-                        <li><a href="#login" id="login-link">Login</a></li>
+                        <li id="login-li"><a href="#login" id="login-link">Login</a></li>
+                        <li id="logout-li"><a href="#logout" id="logout-link">Logout</a></li>
                     </ul>
                 </nav>
             </div>
@@ -225,6 +226,7 @@
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                 <div id="emptyPassword" class="alert alert-danger invisibility">Password requerida</div>
+                <div id="wrongUserPassword" class="alert alert-danger invisibility">Usuario o password incorrectos</div>
                 <button id="btnLogin" class="btn btn-lg btn-primary" type="button">Sign in</button>
             </form>
         </div>

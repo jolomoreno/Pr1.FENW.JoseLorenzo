@@ -88,7 +88,7 @@ body {
  * Home
  */
 .invisibility {
-  display: none;
+  display: none!important;
 }
 
 .section-table {
@@ -146,12 +146,12 @@ body {
 
 #login {}
 
-#inputUser, #inputPassword, #emptyUser, #emptyPassword{
+#inputUser, #inputPassword, #emptyUser, #emptyPassword, #wrongUserPassword{
   width: 350px;
   margin: 0 auto;
 }
 
-#emptyUser, #emptyPassword{
+#emptyUser, #emptyPassword, #wrongUserPassword{
   line-height: 2px;
   height: 34px;
 }
@@ -202,7 +202,7 @@ footer {
     margin-bottom: 10px;
   }
 
-  #inputUser, #inputPassword, #emptyUser, #emptyPassword {
+  #inputUser, #inputPassword, #emptyUser, #emptyPassword, #wrongUserPassword {
     width: 100%;
   }
 }
