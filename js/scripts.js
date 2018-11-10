@@ -3,13 +3,16 @@ function getCookie(name) {
     return v ? v[2] : null;
 }
 
+function deleteCookie(name){
+    window.document.cookie = name+'=; path=/ ;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
 $(document).ready(function(){
     const result = getCookie('tokenAPI');
 
-    console.log(result , '<<<< RESULT');
-
     if (result){
         $('#login-li').addClass('invisibility');
+        $('#registro-li').addClass('invisibility');
     }else{
         $('#logout-li').addClass('invisibility');
         $('#reservar-li').addClass('invisibility');
@@ -105,7 +108,7 @@ $(document).ready(function(){
 
     $('#logout-link').click(function () {
         console.log(window.document.cookie);
-        window.document.cookie = 'tokenAPI=; path=/ ;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        deleteCookie('tokenAPI');
         window.document.location.href = 'index.html';
         $('#logout-li').addClass('invisibility');
         $('#reservar-li').addClass('invisibility');
